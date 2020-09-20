@@ -1,0 +1,31 @@
+<html>
+
+<body>
+<div>
+    <form method="post" action="addUser">
+        <input type="text" name="firstName" placeholder="Имя" />
+        <input type="text" name="lastName" placeholder="Фамилия"/>
+        <input type="text" name="age" placeholder="Возраст" />
+        <input type="text" name="money" placeholder="Денег на счету"/>
+        <input type="text" name="phoneNumber" placeholder="тел. номер" />
+        <input type="text" name="eMail" placeholder="эл. почта"/>
+        <button type="submit">Добавить</button>
+    </form>
+</div>
+<div>Список пользователей</div>
+<form method="post" action="filter">
+    <input type="text" name="filter">
+    <button type="submit">Найти</button>
+</form>
+{{#users}}
+<div>
+    <b>{{firstName}}</b>
+    <b>{{lastName}}</b>
+    <b>{{age}}</b>
+    <b>{{money}}</b>
+    <b>{{phoneNumber}}</b>
+    <b>{{eMail}}</b>
+</div>
+{{/users}}
+</body>
+</html>
